@@ -15,21 +15,26 @@
     <input type="number" name="txt1" id="txt1"> + 
     <input type="number" name="text2" id="txt2">
 
-    <input type="submit" value="Somar" id="somar">
+    <input type="button" value="Somar" id="somar" onclick="clicou()">
 
-    <div id="soma">Resultado</div>
+    <div id="soma">Resultado...</div>
 
     <script>
-        var num1 = document.getElementById('txt1')
-        var num2 = document.getElementById('txt2')
-
-        var n1 = Number('num1'.value)
-        var n2 = Number('num2'.value)
-
-        var so = document.getElementById('soma')
-        var s = n1 + n2
         
-         so.innerHTML = '${s}'
+
+         function clicou() {
+            var num1 = document.getElementById('txt1')
+            var num2 = document.getElementById('txt2')
+
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+
+            var so = document.getElementById('soma')
+            var s = n1 + n2
+
+            so.innerHTML = `O resultado da soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+         }
+        
     </script>
 </body>
 </html>
