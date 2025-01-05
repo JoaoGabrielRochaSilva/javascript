@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body {
+            background-image: linear-gradient(to top, lightblue, rgb(141, 141, 255));
+            height: 100vh;
+        }
+        h1 {
+            color: white;
+            text-shadow: 0px 0px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo DOM</h1>
+    <p name="pa">Estou aprendendo <strong>DOM</strong></p>
+    <p class="para">Resultado Aqui</p>
+    <div id="caixa">Clique Aqui</div>
+
+    <script>
+        var corpo = document.body
+        var p2 = document.getElementsByName('pa')[0]
+        
+        p2.style.background = 'red'
+
+        window.document.write('Insano crazy crazy... ' + p2.innerHTML)
+        
+        corpo.style.background = 'lightgreen'
+        
+    </script>
+</body>
+</html>
