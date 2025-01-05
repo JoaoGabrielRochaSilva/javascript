@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolha dois números:</h1>
+    <input type="number" name="txt1" id="txt1"> + 
+    <input type="number" name="text2" id="txt2">
+
+    <input type="submit" value="Somar" id="somar">
+
+    <div id="soma">Resultado</div>
+
+    <script>
+        var num1 = document.getElementById('txt1')
+        var num2 = document.getElementById('txt2')
+
+        var n1 = Number('num1'.value)
+        var n2 = Number('num2'.value)
+
+        var so = document.getElementById('soma')
+        var s = n1 + n2
+        
+         so.innerHTML = '${s}'
+    </script>
+</body>
+</html>

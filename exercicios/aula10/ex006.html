@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#caixa {
+            background-color: rgb(38, 103, 38);
+            color: white;
+            
+            height: 200px;
+            width: 200px;
+
+            margin: auto;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        div#caixa > p {
+            text-align: center;
+            font-size: 1.6em;
+           
+
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa"><p>INTERAJA.....</p></div>
+
+    <script>
+        var c = window.document.getElementById('caixa')
+        c.addEventListener('click', clicou)
+        c.addEventListener('mouseenter', entrou)
+        c.addEventListener('mouseout', saiu)
+
+        function clicou() {
+            c.innerText = 'CLICOU'
+            c.style.background = 'yellow'
+            c.style.color = 'black'
+        }
+
+        function entrou() {
+            c.innerText = 'ENTROU'
+            c.style.background = 'blue'
+            c.style.color = 'black'
+        }
+
+        function saiu() {
+            c.innerText = 'INTERAJA.....'
+            c.style.background = 'rgb(38, 103, 38)'
+            c.style.color = 'white'
+            c.style.fontSize = '1.6em'
+        }
+    </script>
+</body>
+</html>
