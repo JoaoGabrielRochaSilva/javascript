@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio3</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: gray;
+            color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+
+            width: 300px;
+            height: 100px;
+
+            font-size: 1.5em;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <div id="but"><p>Antessesor e Sucessor</p></div>
+
+    <script>
+        var botao = document.getElementById('but')
+        botao.addEventListener('click', clicou)
+
+        function clicou() {
+            var n = prompt('Digite um Número inteiro:')
+            var n = Number(n)
+            var ant = n - 1
+            var suc = n + 1
+            alert(`Antes do número ${n}, temos ${ant}. \nDepois do número ${n}, temos ${suc}.`) 
+
+
+        }
+    </script>
+</body>
+</html>
