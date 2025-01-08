@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio5</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(175, 120, 175);
+            color: white;
+        }
+
+        div#botao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: rgb(79, 79, 79);
+
+            width: 150px;
+            height: 60px;
+            margin-bottom: 10px;
+
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coversor de Medidas</h1>
+    <div id="botao" onclick="clicou()"><p>Converter</p></div>
+    <div id="res">Clique no botão acima para iniciar</div>
+
+    <script>
+        function clicou() {
+            var res = document.getElementById('res')
+            var num = prompt('Digite uma distância em metros(m)')
+            var num = Number(num)
+            
+            var km = num / 1000
+            var hm = num / 100
+            var dam = num / 10
+            var dm = num * 10
+            var cm = num * 100
+            var mm = num * 1000
+
+            var num = num.toLocaleString('pt-BR')
+            var km = km.toLocaleString('pt-BR')
+            var hm = hm.toLocaleString('pt-BR')
+            var dam = dam.toLocaleString('pt-BR')
+            var dm = dm.toLocaleString('pt-BR')
+            var cm = cm.toLocaleString('pt-BR')
+            var mm = mm.toLocaleString('pt-BR')
+
+
+
+            res.innerHTML = (`<h2>A distância de ${num} metros, corresponde a...</h2><p> ${km} quilômetros (Km)</p> <p>${hm} hectômetros (Hm)</p> <p>${dam} decâmetros (Dam)</p> <p>${dm} decimetros (dm)</p> <p>${cm} centimetros (cm)</p> <p>${mm} milimetros (mm)</p> `)
+        }
+    </script>
+</body>
+</html>

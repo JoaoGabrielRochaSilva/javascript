@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio6</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, lightblue, lightsalmon);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#botao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 2px solid black;
+            border-radius: 10px;
+
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.56);
+
+            background-color: rgb(38, 38, 38);
+            color: white;
+            font-weight: bold;
+            font-size: 1.4em;
+
+            width: 200px;
+            height: 80px;
+        }
+        
+        div#botao:hover {
+            background-color: rgb(72, 72, 72);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <div onclick="clicou()" id="botao"><p>Converter</p></div>
+
+    <div id="res"><p>Clique no botão acima para iniciar</p></div>
+
+    <script>
+        var bot = document.getElementById('botao')
+        
+
+        function clicou() {
+            var res = document.getElementById('res')
+            var num = prompt('Digite uma temperatura em °C (Celsius)')
+            var num = Number(num)
+
+            var k = num + 273.15
+            var f = (num * 9 / 5) + 32
+            
+            var num = num.toLocaleString('pt-BR')
+            var k = k.toLocaleString('pt-BR')
+            var f = f.toLocaleString('pt-BR')
+
+            res.innerHTML = (`<h2>A temperatura de ${num}°C, corresponde a...</h2> <p><strong>${k}°K (Kelvin)</strong></p> <p><strong>${f}°F (Fahrenheit)</strong></p>`)
+        }
+    </script>
+</body>
+</html>

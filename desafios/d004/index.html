@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio4</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(117, 179, 177);
+            color: white;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgb(86, 86, 86);
+            width: 200px;
+            height: 75px;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <div id="botao" onclick="clicou()"><p>Comprar Produto</p></div>
+
+    <script>
+        var bot = document.getElementById('botao')
+        
+        function clicou() {
+            var nome = prompt('Qual é o nome do produto?')
+            var custa = prompt(`Quanto custa ${nome} que você está comprando? `)
+            var custa = Number(custa)
+            var valor = prompt(`Qual foi o valor que você deu para pagar ${nome}`)
+            var valor = Number(valor)
+            var troco = valor - custa
+           
+            if (custa > valor) {
+                var custa = custa.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+                var valor = valor.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+
+                alert(`Você só tem ${valor} e o produto custa ${custa}. \nDinheiro insuficiente.`)
+            } else if (valor == custa) {
+                var custa = custa.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+                var valor = valor.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+        
+                alert(`Você comprou ${nome}, que custou ${custa}. \nDeu ${valor} em dinheiro, não tem troco.\nVolte sempre!`)
+            } else {
+                var custa = custa.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+                var valor = valor.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+                var troco = troco.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+
+                alert(`Você comprou ${nome}, que custou ${custa}. \nDeu ${valor} em dinheiro e vai receber ${troco} de troco. \nVolte sempre!`)
+            }
+              
+        }
+    </script>
+</body>
+</html>

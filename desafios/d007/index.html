@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio7</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, rgb(159, 255, 159), rgb(183, 183, 183));
+            color: rgb(66, 66, 66);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#botao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(39, 39, 39);
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.624);
+
+            width: 200px;
+            height: 70px;
+
+            margin-bottom: 10px;
+
+            transition: 0.3s;
+            
+        }
+
+        div#botao:hover {
+            cursor: pointer;
+            background-color: rgb(76, 75, 75);
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ &#8594; US$</h1>
+
+    <div onclick="clicou()" id="botao"><p>Converter</p></div>
+    <div id="res">Clique no botão acima para iniciar</div>
+
+    <script>
+        var dolar = prompt('Quanto está a cotação do dólar agora?')
+        var dolar = Number(dolar)
+        var res = document.getElementById('res')
+
+        function clicou() {
+            var reais = prompt('Quantos R$ você tem na carteira?')
+            var reais = Number(reais)
+            var conv = reais / dolar
+
+            var reais = reais.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})
+            var conv = conv.toLocaleString('EUA', {style: 'currency', currency: 'USD'})
+
+            res.innerHTML = (`<p>Com <strong>${reais}</strong> reais você tem aproximadamente<strong> ${conv}</strong> dolares</p>`)
+        }
+    </script>
+</body>
+</html>
