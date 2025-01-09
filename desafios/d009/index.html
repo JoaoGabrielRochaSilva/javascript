@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio9</title>
+
+    <style>
+        body {
+            background-color: rgb(163, 249, 163);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#botao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(53, 100, 53);
+            color: white;
+
+            font-size: 1.3em;
+
+            width: 200px;
+            height: 80px;
+
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.442);
+
+            transition-duration: 0.4s;
+        }
+
+        div#botao:hover {
+            cursor: pointer;
+            background-color: rgb(90, 145, 90);
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+
+    <div id="botao"><p>Reajustar Salário</p></div>
+    <div id="res"><p>Clique no botão acima para iniciar.</p></div>
+
+    <script>
+        var botao = document.getElementById('botao')
+        var res = document.getElementById('res')
+        botao.addEventListener('click' , clicou)
+
+        function clicou() {
+            var nome = prompt('Qual é o nome do funcionário?')
+            var salario = prompt(`Qual é o salário atual de ${nome}?`)
+            var rajuste = prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`)
+
+            var salario = Number(salario)
+            var rajuste = Number(rajuste)
+
+            var aumento = salario * rajuste/100
+            var vfinal = salario + aumento
+
+            var salario = salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            var aumento = aumento.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            var vfinal = vfinal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+            res.innerHTML = (`<h2>${nome} recebeu um aumento salarial!</h2> <p>O salário atual era <strong>${salario}</strong>.</p> <p> Com um aumento de<strong> ${rajuste}%</strong>, o salário vai aumentar <strong>${aumento}</strong> no próximo mês.</p> <p> E a partir daí, <strong>${nome}</strong> vai passar a ganhar <strong>${vfinal}</strong></p>`)
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio8</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#botao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: darkslategray;
+            color: white;
+
+            width: 200px;
+            height: 70px;
+
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.506);
+
+            transition-duration: 0.3s;
+        }
+
+        div#botao:hover {
+            background-color: rgb(43, 49, 54);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+
+    <div onclick="clicou()" id="botao"><p>Desconto de 10%</p></div>
+    <div id="res"><p>Clique no botão acima para iniciar</p></div>
+
+    <script>
+        var bot = document.getElementById('botao')
+        var res = document.getElementById('res')
+
+        function clicou() {
+            var nome = prompt('Qual é o nome do produto que você está comprando?')
+            var preço = prompt(`Qual é o preço de ${nome}`)
+            var preço = Number(preço)
+
+            var desconto = preço * 10/100
+            var vfinal = preço - desconto
+
+            var preço = preço.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            var desconto = desconto.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            var vfinal = vfinal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+           res.innerHTML = (`<h2>Calculando desconto de 10% para ${nome}:</h2> <p>O preço original era <strong>${preço}</strong>.</p> <p> Você acaba de ganhar<strong> ${desconto}</strong> de desconto (-10%).</p> <p>No fim, você vai pagar <strong>${vfinal}</strong> no produto <strong>${nome}</strong>.</p>`)
+            
+        }
+    </script>
+</body>
+</html>
