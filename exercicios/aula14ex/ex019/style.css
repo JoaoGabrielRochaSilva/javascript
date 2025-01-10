@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+
+    background-color: rgb(100, 100, 253);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+header {
+    color: white;
+    
+}
+
+section {
+    background-color: white;
+    max-width: 300px;
+    width: 60vw;
+
+    padding: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.59);
+}
+
+div#res {
+    padding-top: 1px;
+}
+
+div#dados {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div#dados > p {
+    display: flex;
+    justify-content: space-between;
+
+    width: 160px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(179, 179, 255);
+
+    font-weight: bold;
+}
+
+#bot {
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(179, 179, 255);
+    width: 55px;
+    padding: 5px;
+
+    border-radius: 5px;
+}
+
+input#fim, #inicio, #passo {
+    width: 100px;
+    border-radius: 5px;
+}
+    
+
+footer {
+    color: white;
+    padding: 5px;
+    
+}
