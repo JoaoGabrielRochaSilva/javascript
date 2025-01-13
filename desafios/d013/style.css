@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+* {
+    scrollbar-width: none;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to bottom, rgb(170, 170, 255), rgb(123, 123, 253), rgb(63, 63, 255));
+   
+}
+
+h1 {
+    text-shadow: 0px 0px 4px black;
+    color: white;
+}
+
+div.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(58, 83, 99);
+    color: white;
+    padding: 10px;
+
+    border-radius: 10px;
+    border: 1px solid white;
+
+    width: 140px;
+    font-weight: bolder;
+
+    transition-duration: 0.3s;
+}
+
+div.botao:hover {
+    cursor: pointer;
+    background-color: rgb(76, 109, 130);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.405);
+    transform: translate(-1px, -1px);
+}
+
+div.botao:active {
+    transform: translate(-2px, -2px);
+}
+
+div.res {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: white;
+
+    border: 2px solid black;
+    border-radius: 0px 0px 15px 15px;
+   
+    max-width: 460px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.272);
+}
