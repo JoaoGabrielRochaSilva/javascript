@@ -33,11 +33,14 @@ function clicou() {
 
         res.innerHTML = (`<h2>Analisando os valores informados</h2> <p>O produto custava <strong>${ant}</strong> e agora custa <strong>${atual}</strong>.</p><p>Hoje o produto está <strong>mais barato.</strong></p> <p>O preço desceu <strong>${sub}</strong> em relação ao preço anterior.</p> <p>Uma variação de <strong>${subp}%</strong> pra baixo.</p>`)
 //Preço não sofreu nenhuma alterção:
-    } else {
+    } else if (ant == atual) {
         var ant = ant.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
         var atual = atual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 
         res.innerHTML = (`<h2>Analisando os valores informados</h2> <p>O produto custava <strong>${ant}</strong> e agora custa <strong>${atual}</strong>.</p><p>O produto não sofreu <strong>nenhuma alteração!!!</strong></p>`)
-    } 
+//Se o usuário não digitar números:
+    } else {
+        alert('Por Favor digite somente números!')
+    }
       
 }

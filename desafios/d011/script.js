@@ -20,5 +20,5 @@ function clicou() {
     let mark = document.getElementsByClassName('mark')[0]
     mark.style.background = 'rgb(254, 163, 163)'
     mark.style.color = 'red'
-   }
+   } 
 }
