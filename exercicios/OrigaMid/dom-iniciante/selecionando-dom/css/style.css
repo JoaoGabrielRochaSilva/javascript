@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    padding: 15px;
+    background-color: lightyellow;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #FB5;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 15vw;
+    margin-right: -15px;
+
+    padding: 12px;
+
+    border-radius: 20px 0px 0px 20px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.424);
+}
+
+.menu > ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.menu > ul > li, a {
+    text-decoration: none;
+    padding: 10px;
+
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(39, 39, 39);
+}
+
+.titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 7.5em;
+    font-weight: normal;
+    flex-basis: 70%;
+
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}    
+
+img, iframe {
+    display: block;
+    width: 100%;
+}
+
+iframe {
+    border-radius: 15px;
+}
+
+.Animais {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Animais > ul {
+    flex-basis: 20%;
+    height: 300px;
+    margin-left: 15vw;
+    overflow-y: scroll;
+}
+
+.Animais ul::-webkit-scrollbar {
+    width: 18px;
+}
+
+.Animais ul::-webkit-scrollbar-thumb {
+    background-color: #FB5;
+    border-radius: 7px;
+    border-left: 4px solid lightyellow;
+    border-right: 4px solid lightyellow;
+}
+
+.Animais ul::-webkit-scrollbar-track {
+    background-color: lightyellow;
+}
+
+.Animais > .Animais-descrição {
+    width: 50%;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.Animais h2 {
+    font-family: monospace;
+    font-size: 1.7em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E54;
+}
+
+.Animais h2::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    background-color: #FB5;
+
+    margin-right: 10px;
+}
+
+.Animais > div > section > p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 25px;
+    padding: 13px 0px;
+}
+
+.Animais-descrição > section {
+    margin-bottom: 30px;
+}
+
+
+.Faq > dl {
+    margin-left: 100px;
+    text-align: justify;
+    width: 60%;
+}
+
+.Faq > dl > dt {
+    font-family: monospace;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #E54;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.Faq > dl > dt::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+
+    background-color: #FB5;
+}
+
+.Faq > dl > dd {
+    line-height: 25px;
+    margin-left: 30px;
+}
+
+.Contato {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Contato > div {
+    width: 55%;
+    margin-right: 20px;
+    padding: 18px;
+
+    background-color: rgb(254, 202, 123);
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.36);
+}
+
+.Contato > ul > li {
+    margin-bottom: 10px;
+}
+
+.Contato > ul > li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+
+    background-color: #FB5;
+}
+
+footer {
+    background-color: #FB5;
+    margin: 30px 0px -15px -15px;
+
+    width: 100vw;
+
+    padding: 15px 0px;
+}
+
+footer > p {
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(39, 39, 39);
+}
+
+@media screen and (max-width: 700px) and (min-width: 400px) {
+    header {
+        margin: -15px -15px 20px -15px;
+        border-radius: 0px;
+    }
+
+    .menu > ul {
+        justify-content: center;
+    }
+    
+    .titulo {
+        margin: 10px 0px 30px 0px;
+        flex-basis: 100%;
+        font-size: 4em;
+        text-align: center;
+    }
+
+
+    .Animais > ul {
+        margin: 0px;
+        flex-basis: 150px;
+        
+    }
+
+    .Faq > dl {
+       margin: auto;
+    }
+
+    iframe {
+        height: 350px;
+    }
+
+    .Contato > h1 {
+        margin-top: 40px;
+    }
+
+    .Contato > div {
+        margin: auto;
+        width: 100%;
+    }
+
+    .Contato > ul {
+        margin-top: 20px;
+        margin-left: 5px;
+    }   
+}
+
+
